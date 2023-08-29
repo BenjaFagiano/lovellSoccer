@@ -44,7 +44,7 @@ class functions_global():
     def texto_xi(self, tipo, selector, texto, tiempo):
         if(tipo == "xpath"):
             try:
-                val = self.SEX(selector)
+                val = self.FEX(selector)
                 val.clear()
                 val.send_keys(texto)
                 print("Se escribe: ", texto)
@@ -55,7 +55,7 @@ class functions_global():
                 return val
         elif (tipo == "id"):
             try:
-                val = self.SEI(selector)
+                val = self.FEI(selector)
                 val.clear()
                 val.send_keys(texto)
                 print("Se escribe: ", texto)
@@ -69,7 +69,7 @@ class functions_global():
     def click_xi(self, tipo, selector, tiempo):
         if (tipo == "xpath"):
             try:
-                val = self.SEX(selector)
+                val = self.FEX(selector)
                 val.click()
                 print("Damos click en el botón: ", selector)
                 t = time.sleep(tiempo)
@@ -79,7 +79,7 @@ class functions_global():
             return val
         elif (tipo == "id"):
             try:
-                val = self.SEI(selector)
+                val = self.FEI(selector)
                 val.click()
                 print("Damos click en el botón: ", selector)
                 t = time.sleep(tiempo)
